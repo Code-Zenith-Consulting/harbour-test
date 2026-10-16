@@ -95,6 +95,11 @@
       padding-bottom: env(safe-area-inset-bottom);
     }
     .launcher { right: 16px; bottom: calc(16px + env(safe-area-inset-bottom)); }
+    /* Phones: the chat has its own header, so the page's bar shrinks to a close button only. */
+    /* A slim bar (not over the chat, so it never covers the chat's own menu button). */
+    .panel-bar { justify-content: flex-end; padding: 0 8px; padding-top: env(safe-area-inset-top); min-height: 32px; }
+    .panel-bar > span:first-child, #panelPopup { display: none; }
+    .panel-bar button { font-size: 24px; padding: 4px 8px; }
   }
 </style>
 </head>
